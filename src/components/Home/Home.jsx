@@ -11,6 +11,11 @@ const Home = () => {
       const newCart=[...cart,tshirt]
       setCart(newCart);
     }
+    const handleRemovefromCart=id=>{
+        const remaining=cart.filter(ts=>ts._id !==id);
+        setCart(remaining);
+
+    }
 
     // console.log(tshirts)
     return (
@@ -18,7 +23,7 @@ const Home = () => {
           <div className='tshirts-container'>
           {
             tshirts.map(tshirt=><Tshirt 
-                key={tshirt.id}
+                key={tshirt._id}
                 tshirt={tshirt}
                 handleAddToCart={handleAddToCart}
 
@@ -29,7 +34,10 @@ const Home = () => {
 
           </div>
           <div className='cart-container'>
-            <Cart cart={cart}></Cart>
+            <Cart 
+            cart={cart}
+            handleRemovefromCart={handleRemovefromCart}
+            ></Cart>
 
           </div>
         </div>
