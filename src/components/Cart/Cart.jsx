@@ -44,4 +44,7 @@ const Cart = ({cart,handleRemovefromCart}) => {
 // 2.ternery condition ? "true" :"false"
 // 3.logical &&: if the condition is true the next thing will be displayed
 // 4.logical ||if the condition is false then the the next thing will be displayed (|| nahoy)
+// conditional styling
+// 1.use ternery
+// 2.ternery inside template
 export default Cart;
